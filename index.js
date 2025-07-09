@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const productContainer = document.getElementById("products");      // fixed ID
-  const loadingStatus = document.getElementById("status");           // fixed ID
+  const productContainer = document.getElementById("products");      
+  const loadingStatus = document.getElementById("status");           
 
   async function fetchProducts() {
     try {
@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const { products } = await response.json();
 
-      loadingStatus.style.display = "none";   // hide “Loading…” text
-      productContainer.innerHTML = "";        // clear any placeholder
+      loadingStatus.style.display = "none";   
+      productContainer.innerHTML = "";        
 
       products.forEach((product) => {
         const card = document.createElement("div");
